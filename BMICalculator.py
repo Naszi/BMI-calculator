@@ -1,4 +1,13 @@
-weight = input("Add meg a súlyod (kg): ")
-tall = input("Add meg a magasságod (m): ")
-bmi = int(int(weight) / (float(tall) ** 2))
-print("A te BMI értéked: " + str(bmi))
+weight = int(input("Add meg a súlyod (kg): "))
+height = float(input("Add meg a magasságod (m): "))
+bmi = (weight / (height ** 2))
+if bmi < 18.5:
+    print(f"Your BMI is {bmi}, you are underweight.")
+elif bmi < 25:
+    print(f"Your BMI is {bmi}, you have a normal weight.")
+elif bmi < 30:
+    print(f"Your BMI is {bmi}, you are slightly overweight.")
+elif bmi < 35:
+    print(f"Your BMI is {bmi}, you are obese.")
+else:
+    print(f"Your BMI is {bmi}, you are clinically obese.")
